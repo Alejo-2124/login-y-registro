@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&family=Oswald:wght@200;300;400;500;700&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: rgba(0, 18, 66, 0.08);
+}
+
+.contenedor{
+    width: 330px;
+    padding: 2rem 1rem;
+    margin: 50px auto;
+    color: #000658;
+    background-color: #ffffff;
+    border-radius: 30px;
+    text-align: center;
+    box-shadow: 0 20px 35px rgba(0,0,0,0.5);
+}
+
+.contenedor h1{
+    font-family: 'Oswald', sans-serif;
+    margin-bottom: 0.2rem;  
+}
+
+form input{
+    width: 92%;
+    outline: none;
+    padding: .5rem;
+    border: 1px solid #00065894;
+    border-radius: 2px;
+    margin-bottom: 2px;
+    font-size: 15px;
+    background-color: #ffffff;
+    color: #000658;
+}
+
+form label{
+    font-size: 15px;
+    display: flex;
+    align-items:center;
+    justify-content: flex-start;
+    gap: 8px;
+    width: 92%; 
+    text-align: left;
+    margin: 5px auto 4px;
+}
+
+.button{
+    font-size: 17px;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 15px;
+    outline: none;
+    border: none;
+    background-color: #000658;
+    color: #f1f1f1;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.button:hover{
+    background-color: #000547;
+    color: #f1f1f1;
+}
+
+.Boton_Ingresar{
+    color: #000658;
+    font-size: 20px;
+    text-decoration: none; /* quita la línea */
+    cursor: pointer;
+    display: inline-block;
+    border: none;
+    background: none;
+    padding: 0;
+}
+
+input[type="submit"]{
+    display: block;        
+    margin-top: 17px;     
+    margin-left: auto;   
+    margin-right: auto;   
+}
+
+.contenedor-enlace{
+    margin-top: 19px;
+}
+
+.texto-enlace {
+  color: #6b7280;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.enlace-registro {
+    color: #0552cc;
+    text-decoration: none;
+    font-weight: 300;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+    cursor: pointer;
+}
+
+.enlace-registro:hover {
+    color: #0552cc;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+}
