@@ -1,3 +1,4 @@
+<?php include 'config.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,31 +11,48 @@
     <div class="contenedor">
         <h1>Registrarse</h1>
         <br>
-        <form action="">
-            <label for="">
-                <img width="18px" src="ICONS/users.svg" alt="">
-                Nombre:
-            </label>
-            <input type="text" placeholder="Ingrese su nombre">
+        
+        <?php
+        if (isset($_SESSION['error'])) {
+            echo '<div class="error">' . $_SESSION['error'] . '</div>';
+            unset($_SESSION['error']);
+        }
+        if (isset($_SESSION['success'])) {
+            echo '<div class="success">' . $_SESSION['success'] . '</div>';
+            unset($_SESSION['success']);
+        }
+        ?>
 
+        <form action="procesar_registro.php" method="POST">
             <label for="">
                 <img width="18px" src="ICONS/users.svg" alt="">
-                Apellido:
+                Nombre completo:
             </label>
-            <input type="text" placeholder="Ingrese su apellido">    
+            <input type="text" name="nombre" placeholder="Ingrese su nombre completo" required>
 
             <label for="">
                 <img width="18px" src="ICONS/mail.svg" alt="">
                 Correo electrónico:
             </label>
-            <input type="email" placeholder="Ingrese su correo electrónico">
-            
+            <input type="email" name="email" placeholder="Ingrese su correo electrónico" required>
             
             <label for="">
                 <img width="18px" src="ICONS/phone.svg" alt="">
                 Número de teléfono:
             </label>
-            <input type="phone" placeholder="Ingrese su número telefónico">
+            <input type="tel" name="telefono" placeholder="Ingrese su número telefónico" required>
+
+            <label for="">
+                <img width="18px" src="ICONS/lock.svg" alt="">
+                Contraseña:
+            </label>
+            <input type="password" name="password" placeholder="Ingrese su contraseña" required>
+
+            <label for="">
+                <img width="18px" src="ICONS/lock.svg" alt="">
+                Confirmar Contraseña:
+            </label>
+            <input type="password" name="confirm_password" placeholder="Confirme su contraseña" required>
 
             <input type="submit" class="button" value="Registrarse">
 
@@ -43,7 +61,6 @@
                     <a href="login.php" class="enlace-registro">Inicia Sesión aquí</a>
                 </p>
             </div>   
-            
         </form>
     </div>
 </body>

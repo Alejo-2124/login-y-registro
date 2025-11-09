@@ -1,3 +1,4 @@
+<?php include 'config.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,15 +11,29 @@
     <div class="contenedor">
         <h1>Iniciar sesión</h1>
         <br>
-        <form action="">
+        
+        <?php
+        
+        if (isset($_SESSION['error'])) {
+            echo '<div class="error">' . $_SESSION['error'] . '</div>';
+            unset($_SESSION['error']);
+        }
+        if (isset($_SESSION['success'])) {
+            echo '<div class="success">' . $_SESSION['success'] . '</div>';
+            unset($_SESSION['success']);
+        }
+        ?>
 
+        <form action="procesar_login.php" method="POST">
             <label for="">
                 <img width="18px" src="ICONS/users.svg" alt="">
                 Correo electrónico:
             </label>
             <input 
                 type="email" 
+                name="email"
                 placeholder="Ingrese su correo electrónico"
+                required
             >
 
             <label for="">
@@ -27,7 +42,9 @@
             </label>
             <input 
                 type="password" 
+                name="password"
                 placeholder="Ingrese su contraseña"
+                required
             >
             
             <input 
@@ -41,7 +58,6 @@
                     <a href="registro.php" class="enlace-registro">Regístrate aquí</a>
                 </p>
             </div>
-        
         </form>
     </div>
 </body>
