@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="contenedor">
-        <h1>Iniciar sesión</h1>
+        <h1>Inicia sesión</h1>
         <br>
         
         <?php
