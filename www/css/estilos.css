@@ -8,7 +8,7 @@
 
 body{
     font-family: 'Roboto', sans-serif;
-    background-color: rgba(0, 18, 66, 0.08);
+    background-color: rgba(0, 0, 120, 0.144);
 }
 
 .contenedor{
@@ -43,7 +43,7 @@ form label{
     font-size: 15px;
     display: flex;
     align-items:center;
-    justify-content: flex-start;
+    justify-content: flex-start; 
     gap: 8px;
     width: 92%; 
     text-align: left;

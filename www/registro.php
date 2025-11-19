@@ -40,7 +40,7 @@
                 <img width="18px" src="ICONS/phone.svg" alt="">
                 Número de teléfono:
             </label>
-            <input type="tel" name="telefono" placeholder="Ingrese su número telefónico" required>
+            <input type="number" name="telefono" placeholder="Ingrese su número telefónico" required>
 
             <label for="">
                 <img width="18px" src="ICONS/lock.svg" alt="">
